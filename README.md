@@ -4,7 +4,7 @@ This is project was created to develop a challenge given to me by Inspire Ethiop
 
 ![demo](https://inspire-ethiopia-challenge.vercel.app/)
 
-![Design](https://raw.githubusercontent.com/drjseifu1991/mygithub/master/asset/design-for-desktop-mode.png)
+![Design](https://raw.githubusercontent.com/drjseifu1991/inspire-ethiopia-challenge/master/asset/design-for-desktop-mode.png)
 
 Built with:
 
