@@ -3,9 +3,7 @@ body {
     max-width: 100%;
     margin: 0;
     padding: 0;
-    /* border: 2px solid red; */
     font-family: 'Open Sans', sans-serif;
-    /* font-family: 'Roboto', sans-serif; */
 }
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
@@ -15,13 +13,15 @@ a {
     text-decoration: none;
     color: black;
 }
+span {
+    font-weight: 700;
+}
 header {
     width: 90%;
     margin: 1em auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* border: 2px solid red; */
 }
 header i {
     font-size: 1.5em;
@@ -30,12 +30,10 @@ header i {
 section {
     width: 100%;
     margin: 0 auto;
-    /* border: 2px solid red; */
 }
 
 .video_container {
     width: 100%;
-    /* border: 2px solid red; */
     margin: 0 auto;
 }
 video {
@@ -106,7 +104,7 @@ video {
 }
 .tabs_list {
     width: 70%;
-    margin: 0 auto 2em auto;
+    margin: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -268,7 +266,7 @@ hr {
 }
 .price_container {
     width: 90%;
-    margin: .5em auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -278,7 +276,7 @@ hr {
     flex: .4;
     display: flex;
     flex-direction: column;
-    margin: .4em .3em;
+    margin: 0 .3em;
 }
 .discount_container h1 {
     font-size: 1.4em;
