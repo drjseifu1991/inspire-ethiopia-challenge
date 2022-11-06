@@ -16,6 +16,10 @@ a {
 span {
     font-weight: 700;
 }
+div {
+    width: 100%;
+    height: 10em;
+}
 header {
     width: 90%;
     margin: 1em auto;
@@ -242,14 +246,12 @@ video {
     font-weight: 600;
     font-size: 1em;
 }
-
 .payment_container {
     width: 100%;
     display: flex;
     flex-direction: column;
     position: fixed;
     bottom: 0;
-    left: 0;
     z-index: 99;
     background-color: white;
 }
@@ -266,7 +268,7 @@ hr {
 }
 .price_container {
     width: 90%;
-    margin: 0 auto;
+    margin: .1em auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -276,7 +278,7 @@ hr {
     flex: .4;
     display: flex;
     flex-direction: column;
-    margin: 0 .3em;
+    margin: .1em .3em;
 }
 .discount_container h1 {
     font-size: 1.4em;
@@ -436,19 +438,9 @@ hr {
         font-weight: 600;
         font-size: 1em;
     }
-    .payment_container {
-        display: none;
-        position: absolute;
-        width: 30%;
-        height: 10em;
-        bottom: 0;
-        right: 0;
-        padding: 0;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        border: 1px solid white;
-    }
+    
     .tabs {
-        width: 90%;
+        width: 70%;
         margin: 1em 0;
     }
     .tabs_list {
@@ -485,6 +477,26 @@ hr {
     }
     video {
         border-radius: 1em;
+    }
+    div {
+        width: 0em;
+        height: 0em;
+    }
+    .payment_container {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 30%;
+        height: 10em;
+        bottom: .5em;
+        right: 5em ;
+        padding: 0;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border: 1px solid white;
+        border-radius: 1em;
+    }
+    .tabb {
+        margin-right: 2em;
     }
 }
 /* 

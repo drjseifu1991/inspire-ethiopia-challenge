@@ -12,11 +12,11 @@
         <script src="./js/init.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
         <script src="./js/tab_toggle.js" defer></script>
-    </head>
+        <script src="./js/share.js" defer></script>
     <body>
         <header>
             <i class="fa-solid fa-arrow-left"></i>
-            <i class="fa-solid fa-share-nodes share"></i>
+            <i id="share" class="fa-solid fa-share-nodes share"></i>
         </header>
         <section>
             <article class="video_container">
@@ -68,13 +68,11 @@
                 </aside>
                 <aside class="tabs">
                     <aside class="tabs_list">
-                        <aside>
+                        <aside class="tabb">
                             <p id="to_tab1" class="active_tab"><a href="#tab1">Information</a></p>
-                            <!-- <hr id="hr_tab1"/> -->
                         </aside>
                         <aside>
                             <p id="to_tab2"><a href="#tab2">Content</a></p>
-                            <!-- <hr id="hr_tab2" class="in_active_line"/> -->
                         </aside>
                     </aside>
                     <hr/>
@@ -158,6 +156,9 @@
                             </aside>
                         </article>
                     </aside>
+                    <aside>
+                        <div></div>
+                    </aside>
                 </aside>
             </article>
             
@@ -170,12 +171,28 @@
             </article>
             <article class="price_container">
                 <aside class="discount_container">
-                    <h1>17.99$</h1>
-                    <h3>72% Disc.</h3>
-                    <h4>64.99$</h4>
+                    <h1>2000ETB</h1>
+                    <h3>50% Disc.</h3>
+                    <h4>4000ETB</h4>
                 </aside>
                 <aside class="purchase_button_container">
-                    <button>Purchase</button>
+                    <form method="POST" action="https://api.chapa.co/v1/hosted/pay" >
+                        <input type="hidden" name="public_key" value="YOUR_PUBLIC_API_KEY" />
+                        <input type="hidden" name="tx_ref" value="negade-tx-12345678sss9" />
+                        <input type="hidden" name="amount" value="100" />
+                        <input type="hidden" name="currency" value="ETB" />
+                        <input type="hidden" name="email" value="drjseifu@dev.et" />
+                        <input type="hidden" name="first_name" value="Dereje" />
+                        <input type="hidden" name="last_name" value="Seifu" />
+                        <input type="hidden" name="title" value="Let us do this" />
+                        <input type="hidden" name="description" value="Paying with Confidence with cha" />
+                        <input type="hidden" name="logo" value="https://yourcompany.com/logo.png" />
+                        <input type="hidden" name="callback_url" value="https://example.com/callbackurl" />
+                        <input type="hidden" name="return_url" value="https://example.com/returnurl" />
+                        <input type="hidden" name="meta[title]" value="test" />
+                        <button type="submit">Purchase</button>
+                    </form>
+                    <!-- <button>Purchase</button> -->
                 </aside>
             </article>
         </article>
