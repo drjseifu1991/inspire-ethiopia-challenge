@@ -97,7 +97,8 @@ video {
     padding: 0;
 }
 .class_container {
-
+    display: flex;
+    flex-direction: column;
 }
 .tabs {
     width: 90%;
@@ -110,31 +111,25 @@ video {
     flex-direction: row;
     justify-content: space-between;
 }
-.tabs_list .active {
-    text-decoration: underline;
-    text-underline-offset: .8em;
-    font-weight: 700;
-}
+
 .tabs_list p {
     font-size: 1em;
 }
-.tab {
+
+.in_active_line {
     display: none;
-    width: 100%;
-    margin: 0 auto;
 }
-.tab_active {
-    display: flex;
-    flex-direction: column;
+.active_tab {
+    font-weight: 700;
+    
 }
-#tab1 p {
-    font-size: 1.2em;
-    font-weight: 500;
+
+.in_active_tab_info {
+  display: none;  
 }
 .course_overview_container {
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;  
 }
 .course_overview_container h1 {
     font-size: 1.1em;
@@ -202,7 +197,8 @@ video {
     margin: 1em 1em;
 }
 .lesson_thumbnail {
-    flex: .4
+    flex: .1;
+    margin: 0;
 }
 .lesson_thumbnail img {
     max-width: 100%;
@@ -214,19 +210,19 @@ video {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 1em;
+    margin: 0;
 }
 .lesson_title h1 {
     margin: 0;
     padding: 0;
     font-size: 1.1em;
-    font-weight: 700;
+    font-weight: 500;
 }
 .lesson_title p {
     margin: 0;
     padding: 0;
     font-size: 1em;
-    font-weight: 600;
+    font-weight: 500;
 }
 .part_container {
     width: 95%;
@@ -239,7 +235,7 @@ video {
     margin-right: 1.5em;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
 }
 .little_info p {
     margin: 0;
@@ -311,10 +307,189 @@ hr {
     font-size: 1.2em;
     font-weight: 600;
 }
-/* @media only screen and (min-width: 481px) and (max-width: 768px) {
-    
-}
+@media only screen and (min-width: 481px) {
+    header {
+        justify-content: flex-start;
+    }
+    header .share {
+        margin-left: 32em;
+    }
+    section {
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .video_container {
+        width: 60%;
+        margin: 2em 0;
 
+    }
+    .lesson_container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        top: 0;
+        right: 0;
+        padding: 0;
+    }
+    .lesson_container h1 {
+        font-size: 1.1em;
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+    }
+    .unit {
+        display: flex;
+        flex-direction: column;
+    }
+    .unit_info{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .unit_title {
+        font-size: 1.1em;
+        font-weight: 700;
+    }
+    .unit_number {
+        background-color: moccasin;
+        border-radius: 50%;
+        width: 2em;
+        height: 2em;
+        text-align: center;
+        position: relative;
+    }
+    .unit_number p {
+        position: absolute;
+        top: .2em;
+        bottom: .5em;
+        left: .5em;
+        right: .5em;
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+    .unit_lesson {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .lesson_thumbnail {
+        flex: .1;
+        margin: 0;
+    }
+    .lesson_title {
+        flex: .6;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0;
+    }
+    .lesson_title h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 1.1em;
+        font-weight: 500;
+    }
+    .lesson_title p {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+        font-weight: 500;
+    }
+    .description_container {
+        margin: 0;
+    }
+    .title_container {
+        margin: 0;
+        padding: 0;
+    }
+    .author_container {
+        width: 40%;
+    }
+    .author_profile {
+        flex: .17;
+    }
+    .author_info {
+        flex: .8;
+    }
+    .class_container {
+        display: flex;
+        flex-direction: row;
+    }
+    .part_container {
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 1em 0 1em 0;
+    }
+    .little_info {
+        margin-right: 1.5em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .little_info p {
+        margin: 0;
+        margin-left: .7em;
+        padding: 0;
+        font-weight: 600;
+        font-size: 1em;
+    }
+    .payment_container {
+        display: none;
+        position: absolute;
+        width: 30%;
+        height: 10em;
+        bottom: 0;
+        right: 0;
+        padding: 0;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border: 1px solid white;
+    }
+    .tabs {
+        width: 90%;
+        margin: 1em 0;
+    }
+    .tabs_list {
+        width: 20%;
+        margin: .5em 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .in_active_line {
+        display: none;
+    }
+    .active_tab {
+        font-weight: 700;
+    }
+    .tabs_list p {
+        font-size: 1em;
+    }
+    .tab {
+        display: none;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .tab_active {
+        display: flex;
+        flex-direction: column;
+    }
+    #tab1 p {
+        font-size: 1.2em;
+        font-weight: 500;
+    }
+    .in_active_tab_info {
+      display: none;  
+    }
+    video {
+        border-radius: 1em;
+    }
+}
+/* 
 @media only screen and (min-width: 769px) {
 
 } */

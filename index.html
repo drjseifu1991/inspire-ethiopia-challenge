@@ -7,6 +7,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="icon" type="image/x-jpg" href="./asset/logo.jpg">
         <script src="./js/count_down_timer.js" defer></script>
         <script src="./js/init.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
@@ -15,7 +16,7 @@
     <body>
         <header>
             <i class="fa-solid fa-arrow-left"></i>
-            <i class="fa-solid fa-share-nodes"></i>
+            <i class="fa-solid fa-share-nodes share"></i>
         </header>
         <section>
             <article class="video_container">
@@ -67,16 +68,22 @@
                 </aside>
                 <aside class="tabs">
                     <aside class="tabs_list">
-                        <p class="active"><a href="#tab1">Information</a></p>
-                        <p><a href="#tab2">Content</a></p>
+                        <aside>
+                            <p id="to_tab1" class="active_tab"><a href="#tab1">Information</a></p>
+                            <hr id="hr_tab1"/>
+                        </aside>
+                        <aside>
+                            <p id="to_tab2"><a href="#tab2">Content</a></p>
+                            <hr id="hr_tab2" class="in_active_line"/>
+                        </aside>
                     </aside>
-                    <aside id="tab1" class="tab">
+                    <aside id="tab1">
                         <p>ሰውየው ለፈጣሪው ሎተሪ እንዲደርሰኝ እፈልጋለው ብሎ ይፀልያል ግን እጣው ሲወጣ አልደረሰውም። በእልህ ወደ ፈጣሪው ቀና ብሎ "ጌታዬ የፊታችን ሰኞ ሚወጣው ሎተሪ ለኔ እንዲደርሰኝ እፈልጋለው፤ ላንተ የሚሳንህ ነገር ስለሌለ እባክህ እጣውን ለኔ አድርገው" አለና ፀለየ። 
                             አሁንም ግን ሎተሪው አልደረሰውም፣ በጣም ተበሳጨ፤ በቁጭት እና በንዴት ወደ ፈጣሪው ቀና ብሎ "ጌታዬ አንተን አመንኩ ትዛዝህን ጠበኩ ታዲያ ለኔ ይሄ ይገባኛል? ቀጣዩ ሎተሪ ለኔ እንዲወጣ አድርግ አምላኬ ሆይ" አለ ድምፁን ከፍ አድርጎ። ይህን ተናግሮ ሲጨርስ ካላሰበው አቅጣጫ አንድ ከፍ ያለ ድምፅ ተሰማ "እስኪ መጀመሪያ አንተ ራስህ ሎተሪውን ቁረጥ" የሚል።
                             ለካ ሎተሪ ሳይቆርጥ ነው እጣው እንዲደርሰው የሚጠብቀው፤ አንዳንዴ እኛም በህይወታችን ከኛ የሚጠበቀውን ሁሉ ሳናደርግ ብዙ እንዲደረግልን የምንጠብቅ ከሆነ ይሄንን ሰውዬ እናስታውስ።</p>
                     </aside>
-                    <aside id="tab2" class="tab tab_active">
-                        <article class="course_overview_container">
+                    <aside>
+                        <article id="tab2" class="in_active_tab_info">
                             <h1>Course Overview</h1>
                             <aside class="over_view">
                                 <i class="fa-solid fa-chalkboard-user"></i>
@@ -98,27 +105,27 @@
                         <article class="lesson_container">
                             <h1>Lessons</h1>
                             <aside class="unit">
-                                <aside class="unit_info" >
+                                <aside class="unit_info">
                                     <aside class="unit_number"><p>1</p></aside>
                                     <p class="unit_title">Intoduction</p>
                                 </aside>
                                 <aside class="unit_lesson">
                                     <aside class="lesson_thumbnail">
-                                        <img src="./asset/images.jpg">
+                                        <i class="fa-solid fa-unlock"></i>
                                     </aside>
                                     
                                     <aside class="lesson_title">
                                         <h1>About Me</h1>
-                                        <p>5min, 42s</p>
+                                        <p>5 min, 42s</p>
                                     </aside>
                                 </aside>
                                 <aside class="unit_lesson">
                                     <aside class="lesson_thumbnail">
-                                        <img src="./asset/images.jpg">
+                                        <i class="fa-solid fa-unlock"></i>
                                     </aside>
                                     <aside class="lesson_title">
                                         <h1>Infulence</h1>
-                                        <p>5min, 42s</p>
+                                        <p>5 min, 42s</p>
                                     </aside>
                                 </aside>
                             </aside>
@@ -130,21 +137,21 @@
                                 </aside>
                                 <aside class="unit_lesson">
                                     <aside class="lesson_thumbnail">
-                                        <img src="./asset/images.jpg">
+                                        <i class="fa-solid fa-lock"></i>
                                     </aside>
                                     
                                     <aside class="lesson_title">
                                         <h1>Self Confidence</h1>
-                                        <p>5min, 42s</p>
+                                        <p>5 min, 42s</p>
                                     </aside>
                                 </aside>
                                 <aside class="unit_lesson">
                                     <aside class="lesson_thumbnail">
-                                        <img src="./asset/images.jpg">
+                                        <i class="fa-solid fa-lock"></i>
                                     </aside>
                                     <aside class="lesson_title">
                                         <h1>Habit</h1>
-                                        <p>5min, 42s</p>
+                                        <p>5 min, 42s</p>
                                     </aside>
                                 </aside>
                             </aside>
@@ -152,23 +159,24 @@
                     </aside>
                 </aside>
             </article>
-            <article class="payment_container">
-                <article class="offer_container">
-                    <hr>
-                    <p>This offers ends in <span id="clock"></span></p>
-                    <hr>
-                </article>
-                <article class="price_container">
-                    <aside class="discount_container">
-                        <h1>17.99$</h1>
-                        <h3>72% Disc.</h3>
-                        <h4>64.99$</h4>
-                    </aside>
-                    <aside class="purchase_button_container">
-                        <button>Purchase</button>
-                    </aside>
-                </article>
-            </article>
+            
         </section>
+        <article class="payment_container">
+            <article class="offer_container">
+                <hr>
+                <p>This offers ends in <span id="clock"></span></p>
+                <hr>
+            </article>
+            <article class="price_container">
+                <aside class="discount_container">
+                    <h1>17.99$</h1>
+                    <h3>72% Disc.</h3>
+                    <h4>64.99$</h4>
+                </aside>
+                <aside class="purchase_button_container">
+                    <button>Purchase</button>
+                </aside>
+            </article>
+        </article>
     </body>
 </html>
