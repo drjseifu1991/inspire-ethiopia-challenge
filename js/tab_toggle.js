@@ -30,6 +30,7 @@ toTab1.addEventListener('click', () => {
    hrTab2.classList.add('in_active_line');
    tab1.classList.remove('in_active_tab_info');
    tab2.classList.add('in_active_tab_info');
+   tab2.classList.remove('course_overview_container');
 });
 
 toTab2.addEventListener('click', () => {
